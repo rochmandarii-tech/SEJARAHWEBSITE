@@ -953,6 +953,118 @@ section { padding: 4rem 2rem; }
   margin: 0 auto 1rem;
 }
 
+/* === TIM KAMI === */
+.tim-section { background: var(--white); position: relative; z-index: 10; }
+
+.tim-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+@media (max-width: 650px) {
+  .tim-grid { grid-template-columns: 1fr; max-width: 280px; margin-left: auto; margin-right: auto; }
+}
+
+.tim-card {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.75rem 1.25rem 1.5rem;
+  text-align: center;
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
+  overflow: hidden;
+}
+.tim-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(to right, var(--gold), var(--red));
+}
+.tim-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.09);
+}
+
+.tim-avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  background-color: var(--navy);
+  border: 3px solid var(--gold);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tim-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+.tim-avatar-fallback {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--gold);
+}
+/* kalau foto berhasil load, sembunyikan fallback */
+.tim-avatar[style*="background-image"]:not([style*="url('')"]) .tim-avatar-fallback {
+  display: none;
+}
+
+.tim-nomor {
+  display: inline-block;
+  background: var(--navy);
+  color: var(--gold);
+  font-family: 'Playfair Display', serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.15rem 0.65rem;
+  border-radius: 50px;
+  margin-bottom: 0.6rem;
+  letter-spacing: 0.05em;
+}
+.tim-nama {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--navy);
+  line-height: 1.4;
+  margin-bottom: 0.3rem;
+}
+.tim-kelas {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.tim-sekolah {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  background: var(--navy);
+  border-radius: 14px;
+  padding: 1.25rem 1.75rem;
+  max-width: 520px;
+  margin: 0 auto;
+}
+.tim-sekolah-icon { font-size: 2rem; flex-shrink: 0; }
+.tim-sekolah-nama {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 0.2rem;
+}
+.tim-sekolah-sub {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.6);
+}
+
 /* === SUMBER === */
 .sumber-section { background: var(--navy); color: white; position: relative; z-index: 10; }
 .sumber-section .section-title { color: white; }
