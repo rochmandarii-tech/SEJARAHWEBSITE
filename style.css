@@ -989,21 +989,20 @@ section { padding: 4rem 2rem; }
 }
 
 .tim-avatar {
-  width: 100%;
-  border-radius: 12px;
+  width: 120px !important;
+  height: 120px !important;
+  border-radius: 16px;
   margin: 0 auto 1rem;
-  background-color: var(--navy);
   border: 3px solid var(--gold);
+  background-color: var(--navy);
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
 }
 .tim-avatar img {
-  width: 100%;
-  height: auto;
+  width: 120px !important;
+  height: 120px !important;
+  object-fit: contain;
   display: block;
-  border-radius: 9px;
 }
 .tim-avatar-fallback {
   font-family: 'Playfair Display', serif;
